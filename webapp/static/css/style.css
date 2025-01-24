@@ -1,0 +1,206 @@
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+.header {
+    background-color: #0c3053;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* MAIN-BLOCK */
+.main-block {
+    background: url(../img/shipping.jpg) no-repeat center;
+    padding: 10vw 0;
+    background-size: 100%;
+
+}
+
+.main-title {
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.main-paragraph {
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+
+/* FEATURED-POST */
+.feature-post-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+
+.feature-col-title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.feature-p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.contacts {
+    background-color: #F5F3F3;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px;
+}
+
+/* ALL-CATEGORIES */
+.all-categories-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.category {
+    padding: 40px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px;
+    margin-bottom: 20px;
+}
+
+.category img {
+    max-width: 100%;
+}
+
+/* LIST AUTHORS  */
+.list-authors-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.people {
+    box-shadow: 1px 1px 3px;
+    border-radius: 5px;
+    background-color: #F5F3F3;
+}
+
+.people .action-image img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.people h5 {
+    font-size: 24px;
+    font-weight: 700;
+
+}
+
+.people p {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(128, 128, 128);
+}
+
+/* FOOTER */
+.footer {
+    background-color: #232536;
+    padding: 50px 0;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-media::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.social-media::before {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6px;
+}
+
+.linkedin {
+    background: url(../img/in.png) center;
+    background-repeat: no-repeat;
+}
+
+.instagram {
+    background: url(../img/insta.png) center;
+    background-repeat: no-repeat;
+}
+
+.twitter {
+    background: url(../img/tw.png) center;
+    background-repeat: no-repeat;
+}
+
+.facebook {
+    background: url(../img/fb.png) center;
+    background-repeat: no-repeat;
+}
+
+.our-contacts {
+    color: white;
+    line-height: 1;
+}
+
+
+.available_shops {
+    height: 300px;
+    width: 1300px;
+    border: 1px solid;
+    margin: 0 auto;
+    position: relative;
+}
+
+.available_shops img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.footer-address, .footer-tel {
+    color: white;
+}
+
+.footer-address:hover, .footer-tel:hover {
+    color: #ffcc00;
+}
+
+.form-edit-create {
+    width: 500px;
+    box-shadow: 1px 1px 3px;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 30px;
+
+}
+
+.user-profile {
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px;
+}
+
+.packages, .addresses {
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px;
+}
+.our-social-media {
+    flex-wrap: wrap;
+    text-align: end;
+}

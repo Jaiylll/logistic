@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="card user-profile" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"> Имя: <strong>{{ request.user.first_name }}</strong></h5>
+
+                <h6 class="card-subtitle mb-2 text-body-secondary">Никнейм: <strong>{{ request.user.username }}</strong>
+                </h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">ИИН: <strong>{{ request.user.passport_pin }}</strong>
+                </h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Email:<strong>{{ request.user.email }}</strong></h6>
+                <h6 class="card-subtitle mb-2 text-body-secondary">Тел: <strong>{{ request.user.phone_number }}</strong>
+                </h6>
+
+
+                <ul>
+                    <li>
+                        <a href="{% url 'webapp:create_address' %}">Добавить адрес</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'webapp:create_package' %}">Заказать посылку</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'accounts:logout' %}">Выйти</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="packages-addresses my-5 row row-cols-md-1 row-cols-sm-1 row-cols-lg-2">
+            <div class="packages col col-lg-5 col-md-6 col-sm-12 me-3 p-4 mt-3">
+                <h2>Мои товары</h2>
+                {% if packages %}
+                    {% for package in packages %}
+                        <div class="card package mt-3" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ package.title }}</h5>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Адрес: {{ package.address }}</li>
+                                <li class="list-group-item">Вес: {{ package.weight }}</li>
+                                <li class="list-group-item">Статус товара: {{ package.status }}</li>
+                                <li class="list-group-item">Трекинг код: {{ package.tracking_number }}</li>
+                                <li class="list-group-item">
+                                    <a href="{{ package.link }}" target="_blank">
+                                        Перейти на страницу товара
+                                    </a>
+                                </li>
+                                <li class="list-group-item">Цена: <strong>{{ package.price }}$</strong></li>
+                            </ul>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <h5 class="text-secondary">Вы ничего не заказали</h5>
+                {% endif %}
+
+
+            </div>
+            <div class="addresses col col-lg-5 col-md-6 col-sm-12  me-3  p-4 mt-3">
+                <h2>Мои адреса</h2>
+                <div class="card mt-3" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        {% for address in addresses %}
+                            <li class="list-group-item">{{ address.country }},{{ address.city }}, {{ address.name }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    </div>
+
+
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
