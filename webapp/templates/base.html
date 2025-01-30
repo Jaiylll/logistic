@@ -47,10 +47,10 @@
                         </li>
                         {% if request.path == '/' %}
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#contacts-link">Контакты</a>
+                                <a class="nav-link text-white" href="#contacts-link">Филиалы</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#how-we-work">О нас</a>
+                                <a class="nav-link text-white" href="#about_us">О нас</a>
                             </li>
                         {% endif %}
                     </ul>
@@ -65,12 +65,15 @@
 {% endblock %}
 {% block footer %}
     <footer class="footer">
-        <div class="container footer-container row row-cols-lg-2 row-cols-md-1">
+        <div class="container footer-container ">
             <div class="our-contacts">
-                <a href="https://go.2gis.com/qyRR7" target="_blank" class="footer-address">Бишкек, Бишкек, Чуй проспект,
-                    36</a>
-                <p class="my-3">hello@diplomka.com</p>
-                <a href="https://wa.me/996556301202" target="_blank" class="footer-tel">+996556301202 Whatsapp</a>
+                <a href="https://go.2gis.com/qyRR7" target="_blank" class="footer-address">
+                    <span><i class="bi bi-geo-alt"></i></span> Бишкек, Чуй проспект, 36
+                </a>
+                <p class="my-3"><span><i class="bi bi-envelope-at-fill"></i></span> hello@diplomka.com</p>
+                <a href="https://wa.me/996556301202" target="_blank" class="footer-tel">
+                    <span><i class="bi bi-whatsapp"></i></span> +996(556)-301-202
+                </a>
             </div>
             <div class="our-social-media d-flex flex-wrap ms-auto mt-3">
                 <a href="https://ru.linkedin.com/" class="social-media linkedin" target="_blank"></a>

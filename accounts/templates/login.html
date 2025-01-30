@@ -1,15 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% if has_error %}
-        <p style="color: red;">Invalid username or password. Please try again.</p>
-    {% endif %}
+
     <div class="form-edit-create">
         <h2>Вход</h2>
+
         <form action="" method="post">
             {% csrf_token %}
             {{ form.as_p }}
+            {% if has_error %}
+                <p style="color: red;">Неправильно введен имя пользователя или пароль</p>
+            {% endif %}
             <input type="submit" value="Войти" class="btn btn-primary">
         </form>
+
     </div>
 {% endblock %}
 {% block footer %}
